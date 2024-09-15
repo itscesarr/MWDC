@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve</title>
+    <style> 
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .puzzle-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+        .p {
+            text-align: center;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="puzzle-container">
+        <h1>MWDC</h1>
+        <p>This is a test for the initiation of the Michigan Web Development Collective. All test takers have one attempt.</p>
+        <p>This test is also integrated with a Generative AI prevention protocol. Do not plagiarize.</p>
+        <p>Your task is to solve the following problem:</p>
+        
+        <pre>
+Write a function in C++ that returns the sum of integers:
+int a and int b:
+        </pre>
+
+        <p>Type your solution below:</p>
+        <textarea id="codeInput" placeholder="Write your C++ code here..."></textarea>
+        <button onclick="checkSolution()">Submit Solution</button>
+
+        <div id="result" style="margin-top: 20px;"></div>
+    </div>
+
+    <script>
+        function checkSolution() {
+            const userCode = document.getElementById('codeInput').value;
+
+            // Simulated check for correct solution
+            if (userCode.includes('int sum(int a, int b)') && userCode.includes('return a + b;')) {
+                document.getElementById('result').innerHTML = "<h3>42.29200750268479, -83.71625944172399</h3>";
+            } else {
+                  alert("You have run out of attempts.");
+                 window.location.href = "Site can't be reached";
+            }
+        }
+    </script>
+</body>
+</html>
